@@ -21,6 +21,7 @@ public final class HangulEditDistance extends UDF {
     0x313b, 0x313c, 0x313d, 0x313e, 0x313f, 0x3140, 0x3141, 0x3142, 0x3144, 0x3145,
     0x3146, 0x3147, 0x3148, 0x314a, 0x314b, 0x314c, 0x314d, 0x314e};
 
+  // hangul split: http://hanpsy.tistory.com/2
   protected String splithangul(String s) {
     StringBuilder builder = new StringBuilder();
     System.out.printf("input string=%s\n", s);
@@ -50,6 +51,7 @@ public final class HangulEditDistance extends UDF {
     return result;
   }
 
+  // this refer code: https://github.com/tdebatty/java-string-similarity
   public final int edit_distance(final String s1, final String s2) {
     if (s1.equals(s2)) {
       return 0;
