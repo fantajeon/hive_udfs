@@ -2,7 +2,7 @@
 
 hive_jar=$(ls /usr/local/Cellar/hive/2.1.0/libexec/lib/hive-exec-*.jar)
 #hadoop_jar='/usr/local/Cellar/hadoop/2.7.2/libexec/share/hadoop/common/hadoop-common-2.7.2.jar'
-hadoop_jar='/usr/local/Cellar/hadoop/2.6.0/libexec/share/hadoop/common/hadoop-common-2.6.0.jar'
+hadoop_jar='/usr/local/Cellar/hadoop/hadoop-2.6.0-cdh5.5.1/share/hadoop/common/hadoop-common-2.6.0-cdh5.5.1.jar'
 
 echo "hive_jar=${hive_jar}"
 echo "hadoop_jar=${hadoop_jar}"
