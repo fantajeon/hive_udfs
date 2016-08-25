@@ -24,12 +24,12 @@ public final class HangulEditDistance extends UDF {
   // hangul split: http://hanpsy.tistory.com/2
   protected String splithangul(String s) {
     StringBuilder builder = new StringBuilder();
-    System.out.printf("input string=%s\n", s);
+    //System.out.printf("input string=%s\n", s);
     for(int i=0; i < s.length(); i++) {
       char uniVal = s.charAt(i);
       final char v = (char)(uniVal - 0xAC00);
       if( v >=0 && v <= 11172) {
-        System.out.format("[%c:", uniVal);
+        //System.out.format("[%c:", uniVal);
         // 유니코드 표에 맞추어 초성 중성 종성을 분리합니다..
         char cho = (char) ((((v - (v % 28)) / 28) / 21));
         char jung = (char) ((((v - (v % 28)) / 28) % 21));
@@ -39,15 +39,15 @@ public final class HangulEditDistance extends UDF {
         if( jong != 0x0000 ) {
           builder.append(JON[jong]);
         }
-        System.out.printf("%d,%d,%d]", (int)cho,(int)jung,(int)jong);
+        //System.out.printf("%d,%d,%d]", (int)cho,(int)jung,(int)jong);
       } else {
-        System.out.format("E");
+        //System.out.format("E");
         builder.append(uniVal);
       }
     }
 
     String result = builder.toString();
-    System.out.printf("split string=%s\n", result);
+    //System.out.printf("split string=%s\n", result);
     return result;
   }
 
